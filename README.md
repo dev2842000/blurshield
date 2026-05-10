@@ -4,6 +4,16 @@
 
 No clicking. No toggling before every call. Add a domain once — BlurShield handles the rest.
 
+## Install
+
+**Chrome / Brave / Arc** — manual install (free, 1 min):
+1. [Download ZIP](https://github.com/dev2842000/blurshield/archive/refs/heads/main.zip) and unzip it
+2. Go to `chrome://extensions` → enable **Developer mode** (top right)
+3. Click **Load unpacked** → select the unzipped `blurshield-main` folder
+4. Pin the extension from the puzzle icon in your toolbar
+
+**Microsoft Edge** — coming soon on Edge Add-ons Store (free)
+
 ---
 
 ## The problem
