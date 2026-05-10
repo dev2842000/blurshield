@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlurShield</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <span class="logo-icon">🛡</span>
+        <span class="logo-text">BlurShield</span>
+      </div>
+    </header>
+
+    <!-- Auto-detect status -->
+    <div class="status-card" id="status-card">
+      <div class="status-dot" id="status-dot"></div>
+      <div class="status-text">
+        <div class="status-title" id="status-title">Not sharing</div>
+        <div class="status-sub" id="status-sub">Sites will blur automatically when you share screen on Meet, Zoom, or Teams (browser)</div>
+      </div>
+    </div>
+
+    <!-- Protected Sites -->
+    <div class="section-title">Protected Sites</div>
+
+    <ul class="site-list" id="site-list"></ul>
+    <div class="empty-state" id="empty-state">No sites added yet. Add a domain below.</div>
+
+    <form class="add-row" id="add-form">
+      <input
+        type="text"
+        id="url-input"
+        placeholder="e.g. gmail.com or app.example.com"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="error" id="error-msg"></div>
+
+    <!-- Manual override -->
+    <div class="divider"></div>
+
+    <div class="manual-row">
+      <div class="manual-text">
+        <div class="manual-title">Manual blur</div>
+        <div class="manual-sub">Using Zoom app, Teams app, or any native screen share? Toggle this on for the duration of your call.</div>
+      </div>
+      <label class="toggle">
+        <input type="checkbox" id="privacy-toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="manual-warn" id="manual-warn" style="display:none">
+      Sites are blurred now. Remember to toggle off when your call ends.
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
